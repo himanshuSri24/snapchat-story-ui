@@ -56,15 +56,16 @@ const Story = (props) => {
     <div className="w-[300px] relative aspect-[9/16] rounded-lg bg-black text-white overflow-hidden">
       {/* Top Bar */}
       <div className="flex absolute z-20 w-full gap-1 pt-2 px-2 h-[1px]">
-        {Array.from({ length: numberOfItems }, (_, i) => i).map((i) => (
-          <div
-            className={`w-full h-[1px] px-4 bg-white ${
-              i < displayImage ? "opacity-100" : "opacity-50"
-            }`}
-            key={i}
-            onClick={() => setDisplayImage(i)}
-          ></div>
-        ))}
+        {mediaType === "IMAGE" &&
+          Array.from({ length: numberOfItems }, (_, i) => i).map((i) => (
+            <div
+              className={`w-full h-[1px] px-4 bg-white ${
+                i < displayImage ? "opacity-100" : "opacity-50"
+              }`}
+              key={i}
+              onClick={() => setDisplayImage(i)}
+            ></div>
+          ))}
         {mediaType === "VIDEO" && (
           <div className="absolute w-full h-[1px] bg-gray-500">
             <div
