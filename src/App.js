@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="h-full w-full py-10 pl-10">
-      <SnapchatUI {...SnapchatUIProps} />
+      <SnapchatUI {...SnapchatUIProps} className="flex-shrink-0" />
       <div className="flex flex-col mt-10 w-[300px] gap-4">
         <span className="text-xl uppercase font-semibold">Demo Buttons:</span>
         <button

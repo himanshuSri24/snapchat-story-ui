@@ -76,13 +76,16 @@ const Story = (props) => {
         )}
       </div>
       {/* UserName and Image */}
-      <div className="absolute top-4 left-2 w-8 h-8 rounded-full bg-white flex items-start justify-start gap-4">
-        <img src={logo} alt="N/A" className="w-8 h-8" />
-        <div className="flex flex-col items-start justify-start">
-          <span className="text-sm font-semibold whitespace-nowrap">
+      <div className="absolute top-4 left-2 w-full h-auto flex items-start justify-start gap-4">
+        <div className="bg-white rounded-full">
+          <img src={logo} alt="N/A" className="w-8 h-8" />
+        </div>
+
+        <div className="flex flex-col items-start justify-between">
+          <span className="text-xs font-semibold whitespace-nowrap">
             {userName}
           </span>
-          <span className="text-xs whitespace-nowrap font-light">
+          <span className="text-[10px] absolute whitespace-nowrap bottom-0 font-light opacity-90">
             1 min ago
           </span>
         </div>
@@ -132,14 +135,14 @@ const Story = (props) => {
           autoPlay={true}
           loop={true}
           alt="N/A"
-          className="w-full h-full"
+          className="w-full h-[88%] object-fill"
           onClick={handleVideoClick}
         />
       ) : (
         <img
           src={urls[displayImage]}
           alt="N/A"
-          className="w-full h-full"
+          className="w-full h-[88%] object-fill"
           onClick={handleImageClick}
         />
       )}
