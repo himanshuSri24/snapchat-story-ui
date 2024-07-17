@@ -76,7 +76,7 @@ const Story = (props) => {
         )}
       </div>
       {/* UserName and Image */}
-      <div className="absolute top-4 left-2 w-full h-auto flex items-start justify-start gap-4">
+      <div className="absolute top-4 left-2 w-full h-auto flex items-start justify-start gap-[8px]">
         <div className="bg-white rounded-full">
           <img src={logo} alt="N/A" className="w-8 h-8" />
         </div>
@@ -85,7 +85,7 @@ const Story = (props) => {
           <span className="text-xs font-semibold whitespace-nowrap">
             {userName}
           </span>
-          <span className="text-[10px] absolute whitespace-nowrap bottom-0 font-light opacity-90">
+          <span className="text-[10px] ml-[1px] absolute whitespace-nowrap bottom-0 font-light opacity-90">
             1 min ago
           </span>
         </div>
